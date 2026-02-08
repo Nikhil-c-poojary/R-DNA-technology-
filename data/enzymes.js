@@ -166,6 +166,7 @@ rf: {
   exam: "Stop codons are recognized by release factors, not tRNA.",
   error: "Thinking tRNA binds to stop codons.",
   image: "images/rf.png"
-},
+};
+
 
 
