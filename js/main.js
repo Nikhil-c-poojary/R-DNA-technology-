@@ -13,13 +13,14 @@ if (!id || !enzymes[id]) {
 
   const img = document.getElementById("image");
   img.src = e.image;
-  img.alt = e.name + " illustration";
+  img.alt = e.name;
 
   const ul = document.getElementById("activities");
-  ul.innerHTML = ""; // IMPORTANT
-  e.activities.forEach(a => {
+  ul.innerHTML = "";
+
+  e.activities.forEach(act => {
     const li = document.createElement("li");
-    li.textContent = a;
+    li.textContent = act;
     ul.appendChild(li);
   });
 }
