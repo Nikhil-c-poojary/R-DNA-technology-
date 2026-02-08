@@ -193,6 +193,24 @@ footer {
   height: auto;     /* keeps proportion */
   margin-bottom: 12px;
 }
+.main-header {
+  position: relative;   /* important */
+}
+
+.site-logo {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+
+  width: 70px;          /* adjust size here */
+  height: auto;
+
+  border-radius: 50%;   /* makes it round */
+  overflow: hidden;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
 
 
 
