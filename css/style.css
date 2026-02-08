@@ -168,6 +168,27 @@ footer {
   display: block;
   margin: 30px auto !important;
 }
+/* Enzyme page content formatting */
+.content {
+  max-width: 850px;      /* prevents full-width stretching */
+  margin: 40px auto;     /* centers content */
+  padding: 20px 30px;    /* space from sides */
+  background: white;
+  border-radius: 6px;
+}
+
+/* Justified paragraph text */
+.content p {
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Activity list formatting */
+.content ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
 
 
 
