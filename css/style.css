@@ -169,6 +169,16 @@ footer {
   margin: 25px auto;
   border-radius: 6px;
 }
+/* Enzyme image control */
+#image {
+  max-width: 420px;      /* controls size */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 25px auto;
+  border-radius: 6px;
+}
+
 
 
 
