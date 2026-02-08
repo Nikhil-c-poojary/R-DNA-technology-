@@ -32,8 +32,7 @@ const enzymes = {
   ssb: {
     name: "SSB Proteins",
     process: "DNA Replication",
-    function: "Single-strand binding (SSB) proteins bind to exposed single-stranded DNA during replication. They stabilize the strands, prevent re-annealing and secondary structure formation, and ensure smooth movement of the replication fork. SSB proteins support DNA polymerase activity but do not possess enzymatic function themselves.
-.",
+    function: "SSB proteins bind to single-stranded DNA and prevent re-annealing.",
     activities: [
       "Stabilize ssDNA",
       "Prevent secondary structures"
@@ -210,4 +209,5 @@ const enzymes = {
   }
 
 };
+
 
