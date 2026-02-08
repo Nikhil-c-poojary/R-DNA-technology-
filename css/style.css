@@ -1,66 +1,131 @@
+/* Global */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
 }
 
-header {
-  background: #0b3c5d;
+/* Header */
+.main-header {
+  background-color: #0b3c5d;
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 40px 20px;
 }
 
-nav, footer {
-  text-align: center;
-  padding: 15px;
-  background: #eaeaea;
+.main-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
 
-nav a, footer a {
-  margin: 0 15px;
+.main-header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: #eaeaea;
+  padding: 15px 0;
+}
+
+.main-nav a {
   text-decoration: none;
+  color: #0b3c5d;
   font-weight: bold;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #0b3c5d;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 6px;
+}
+
+.hero h2 {
+  margin-bottom: 20px;
   color: #0b3c5d;
 }
 
-.content {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px;
+.content-list {
+  list-style-type: square;
+  padding-left: 20px;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  margin: 12px 0;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+.content-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
 }
 
-.blue { color: #2b7cff; }
-.red { color: #d62828; }
-.purple { color: #6a4c93; }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #eaeaea;
+  font-size: 0.9rem;
+}
+
+/* ===================== */
+/* Animations */
+/* ===================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .fade-in {
-  animation: fade 1.2s;
+  animation: fadeIn 1.2s ease forwards;
 }
 
-.slide-up {
-  animation: slide 1s;
+.slide-down {
+  animation: slideDown 1s ease forwards;
 }
 
-@keyframes fade {
-  from {opacity:0;}
-  to {opacity:1;}
-}
-
-@keyframes slide {
-  from {transform: translateY(40px); opacity:0;}
-  to {transform: translateY(0); opacity:1;}
-}
-
-img {
-  max-width: 100%;
-  margin-top: 15px;
+.fade-up {
+  animation: fadeUp 1.2s ease forwards;
 }
