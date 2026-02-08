@@ -188,6 +188,12 @@ footer {
   margin-left: 20px;
   line-height: 1.6;
 }
+.site-logo {
+  width: 80px;      /* control size here */
+  height: auto;     /* keeps proportion */
+  margin-bottom: 12px;
+}
+
 
 
 
