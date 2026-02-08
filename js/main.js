@@ -1,46 +1,25 @@
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+const id = new URLSearchParams(window.location.search).get("id");
 
-const nameEl = document.getElementById("name");
-const processEl = document.getElementById("process");
-const functionEl = document.getElementById("function");
-const examEl = document.getElementById("exam");
-const errorEl = document.getElementById("error");
-const imageEl = document.getElementById("image");
-const activitiesEl = document.getElementById("activities");
-
-if (id && enzymes[id]) {
+if (!id || !enzymes[id]) {
+  document.getElementById("name").textContent = "Invalid or missing enzyme ID";
+} else {
   const e = enzymes[id];
 
-  nameEl.textContent = e.name;
-  processEl.textContent = e.process;
-  functionEl.textContent = e.function;
-  examEl.textContent = "Exam Point: " + e.exam;
-  errorEl.textContent = "Common Error: " + e.error;
+  document.getElementById("name").textContent = e.name;
+  document.getElementById("process").textContent = e.process;
+  document.getElementById("function").textContent = e.function;
+  document.getElementById("exam").textContent = "Exam Point: " + e.exam;
+  document.getElementById("error").textContent = "Common Error: " + e.error;
 
-  /* Image handling */
-  if (e.image) {
-    imageEl.src = e.image;
-    imageEl.alt = e.name;
-    imageEl.style.display = "block";
-  } else {
-    imageEl.style.display = "none";
-  }
+  const img = document.getElementById("image");
+  img.src = e.image;
+  img.alt = e.name + " illustration";
 
-  /* Activities list */
-  activitiesEl.innerHTML = "";
-  e.activities.forEach(activity => {
+  const ul = document.getElementById("activities");
+  ul.innerHTML = ""; // IMPORTANT
+  e.activities.forEach(a => {
     const li = document.createElement("li");
-    li.textContent = activity;
-    activitiesEl.appendChild(li);
+    li.textContent = a;
+    ul.appendChild(li);
   });
-
-} else {
-  /* Error state */
-  nameEl.textContent = "Enzyme Not Found";
-  processEl.textContent = "";
-  functionEl.textContent = "";
-  examEl.textContent = "";
-  errorEl.textContent = "Invalid or missing enzyme ID.";
-  imageEl.style.display = "none";
 }
