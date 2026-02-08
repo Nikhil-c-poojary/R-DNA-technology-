@@ -160,24 +160,17 @@ footer {
 .card:hover a {
   color: #08304a;
 }
-/* Enzyme image control */
-#image {
-  max-width: 420px;      /* controls size */
-  width: 100%;
-  height: auto;
+/* FORCE enzyme image size */
+.content img {
+  max-width: 400px !important;
+  width: 100% !important;
+  height: auto !important;
   display: block;
-  margin: 25px auto;
-  border-radius: 6px;
+  margin: 30px auto !important;
 }
-/* Enzyme image control */
-#image {
-  max-width: 420px;      /* controls size */
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 25px auto;
-  border-radius: 6px;
-}
+
+
+
 
 
 
