@@ -111,64 +111,61 @@ const enzymes = {
     exam: "Prevents overwinding.",
     error: "Not helicase.",
     image: "images/gyrase.png"
-  }
-};
-const enzymes = {
+  },
   trs: {
-    name: "Aminoacyl-tRNA Synthetase",
-    process: "Translation",
-    function: "Catalyzes the attachment of specific amino acids to their corresponding tRNA molecules, ensuring accuracy of the genetic code.",
-    activities: [
-      "Recognizes correct amino acid",
-      "Binds corresponding tRNA",
-      "Forms aminoacyl-tRNA complex"
-    ],
-    exam: "Each amino acid has a specific aminoacyl-tRNA synthetase enzyme.",
-    error: "Confusing synthetase with ribosomal function.",
-    image: "images/trs.png"
-  },
+  name: "Aminoacyl-tRNA Synthetase",
+  process: "Translation",
+  function: "Aminoacyl-tRNA synthetase catalyzes the attachment of a specific amino acid to its corresponding tRNA, ensuring fidelity of the genetic code.",
+  activities: [
+    "Recognizes correct amino acid",
+    "Binds corresponding tRNA",
+    "Forms aminoacyl-tRNA complex"
+  ],
+  exam: "Each amino acid has a specific aminoacyl-tRNA synthetase.",
+  error: "Confusing synthetase activity with ribosomal function.",
+  image: "images/trs.png"
+},
 
-  if: {
-    name: "Initiation Factors",
-    process: "Translation",
-    function: "Assist in the assembly of the ribosomal subunits at the start codon of mRNA.",
-    activities: [
-      "Bind to small ribosomal subunit",
-      "Position initiator tRNA",
-      "Initiate translation"
-    ],
-    exam: "IF-1, IF-2, IF-3 are involved in prokaryotic initiation.",
-    error: "Mixing initiation factors with elongation factors.",
-    image: "images/if.png"
-  },
+if: {
+  name: "Initiation Factors",
+  process: "Translation",
+  function: "Initiation factors assist in the assembly of ribosomal subunits at the start codon of mRNA to begin protein synthesis.",
+  activities: [
+    "Bind to small ribosomal subunit",
+    "Position initiator tRNA",
+    "Initiate translation"
+  ],
+  exam: "IF-1, IF-2, and IF-3 are involved in prokaryotic translation initiation.",
+  error: "Mixing initiation factors with elongation factors.",
+  image: "images/if.png"
+},
 
-  ef: {
-    name: "Elongation Factors",
-    process: "Translation",
-    function: "Facilitate the addition of amino acids during polypeptide chain elongation.",
-    activities: [
-      "Deliver aminoacyl-tRNA",
-      "Assist translocation",
-      "Maintain translation accuracy"
-    ],
-    exam: "EF-Tu and EF-G are key elongation factors.",
-    error: "Assuming elongation is enzyme-free.",
-    image: "images/ef.png"
-  },
+ef: {
+  name: "Elongation Factors",
+  process: "Translation",
+  function: "Elongation factors facilitate the entry of aminoacyl-tRNA into the ribosome and the translocation of the ribosome along mRNA.",
+  activities: [
+    "Deliver aminoacyl-tRNA to A site",
+    "Assist ribosomal translocation",
+    "Maintain elongation accuracy"
+  ],
+  exam: "EF-Tu and EF-G are key elongation factors in prokaryotes.",
+  error: "Assuming elongation occurs without factors.",
+  image: "images/ef.png"
+},
 
-  rf: {
-    name: "Release Factors",
-    process: "Translation",
-    function: "Recognize stop codons and terminate protein synthesis.",
-    activities: [
-      "Bind to stop codon",
-      "Release polypeptide chain",
-      "Dissociate ribosome"
-    ],
-    exam: "RF-1 and RF-2 recognize stop codons in prokaryotes.",
-    error: "Thinking tRNA recognizes stop codons.",
-    image: "images/rf.png"
-  }
-};
+rf: {
+  name: "Release Factors",
+  process: "Translation",
+  function: "Release factors recognize stop codons and terminate polypeptide synthesis by releasing the completed protein.",
+  activities: [
+    "Recognize stop codon",
+    "Release polypeptide chain",
+    "Dissociate ribosomal complex"
+  ],
+  exam: "Stop codons are recognized by release factors, not tRNA.",
+  error: "Thinking tRNA binds to stop codons.",
+  image: "images/rf.png"
+},
 
 
