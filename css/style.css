@@ -2,13 +2,13 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #eaf5e6;
+  background-color: #64d181;
   color: #222;
 }
 
 /* Header */
 .main-header {
-  background-color: #1f4d2b;
+  background-color: #1bc247;
   color: white;
   text-align: center;
   padding: 40px 20px;
@@ -188,6 +188,7 @@ footer {
   margin-left: 20px;
   line-height: 1.6;
 }
+
 
 
 
