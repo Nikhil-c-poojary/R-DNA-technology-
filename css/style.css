@@ -129,3 +129,36 @@ footer {
 .fade-up {
   animation: fadeUp 1.2s ease forwards;
 }
+/* ===================== */
+/* Card Styling */
+/* ===================== */
+
+.card {
+  background: #ffffff;
+  padding: 18px 22px;
+  margin: 15px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Link inside card */
+.card a {
+  text-decoration: none;
+  color: #0b3c5d;
+  font-weight: bold;
+  display: block;
+}
+
+/* Optional: subtle color shift on hover */
+.card:hover a {
+  color: #08304a;
+}
+
+
