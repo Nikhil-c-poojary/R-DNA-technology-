@@ -2,122 +2,114 @@ const enzymes = {
   ori: {
     name: "Origin of Replication (OriC)",
     process: "DNA Replication",
-    function: "Serves as the specific DNA sequence where replication begins Provides a binding site for initiator proteins (e.g., DnaA in prokaryotes) Facilitates local unwinding of DNA, forming a replication bubble Determines the direction and progression of replication forks Ensures accurate and timely duplication of the entire genome before cell division In bacteria, the origin of replication is called OriC and is essential for controlled initiation of DNA replication.",
-    activities: ["AT-rich region", "Helicase binding"],
-    exam: "Initiation site of replication.",
-    error: "Not an enzyme.",
-    image: "images/uploads/ori.png"
+    function: "OriC is the specific DNA sequence where replication begins. It allows initiator proteins to bind and unwind the DNA, enabling replication forks to form.",
+    activities: [
+      "Binding of DnaA protein",
+      "Local DNA unwinding",
+      "Recruitment of helicase"
+    ],
+    exam: "Replication always starts at a fixed origin site (OriC in prokaryotes).",
+    error: "Students often confuse Ori with primer.",
+    image: "images/ori.png"
   },
 
   helicase: {
     name: "DNA Helicase",
     process: "DNA Replication",
-    function: "DNA Helicase is an essential enzyme involved in DNA replication. Its primary function is to unwind the double-stranded DNA helix by breaking the hydrogen bonds between complementary base pairs. This unwinding creates two single DNA strands that serve as templates for DNA synthesis. Helicase moves along the DNA in an ATP-dependent manner, separating the strands ahead of the replication fork and allowing other replication enzymes, such as DNA polymerase, to function efficiently. By opening up the DNA helix, helicase plays a crucial role in ensuring accurate and continuous replication of genetic material.
-.",
-    activities: ["Breaks hydrogen bonds"],
-    exam: "Forms replication fork.",
-    error: "Does not synthesize DNA.",
-    image: "images/uploads/helicase.png"
+    function: "Helicase unwinds the DNA double helix by breaking hydrogen bonds, creating two single strands for replication.",
+    activities: [
+      "ATP-dependent unwinding",
+      "Fork progression"
+    ],
+    exam: "Helicase separates DNA strands.",
+    error: "Not responsible for synthesis.",
+    image: "images/helicase.png"
   },
 
   ssb: {
-    name: "SSB Protein",
+    name: "SSB Proteins",
     process: "DNA Replication",
-    function: "Stabilizes single-stranded DNA.",
-    activities: ["Prevents re-annealing"],
-    exam: "Maintains ssDNA stability.",
-    error: "Does not unwind DNA.",
-    image: "images/uploads/ssb.png"
+    function: "Single-strand binding proteins stabilize unwound DNA and prevent re-annealing.",
+    activities: [
+      "Bind ssDNA",
+      "Prevent secondary structures"
+    ],
+    exam: "SSB proteins stabilize ssDNA.",
+    error: "They do not unwind DNA.",
+    image: "images/ssb.png"
   },
 
   primase: {
     name: "Primase",
     process: "DNA Replication",
-    function: "Synthesizes RNA primer.",
-    activities: ["Primer synthesis"],
-    exam: "Provides 3′-OH group.",
-    error: "Does not elongate DNA.",
-    image: "images/uploads/primase.png"
+    function: "Primase synthesizes short RNA primers required for DNA polymerase to begin synthesis.",
+    activities: [
+      "RNA primer synthesis"
+    ],
+    exam: "DNA polymerase cannot start without primer.",
+    error: "Primase is not DNA polymerase.",
+    image: "images/primase.png"
   },
 
   pol3: {
     name: "DNA Polymerase III",
     process: "DNA Replication",
-    function: "Main elongation enzyme.",
-    activities: ["5′→3′ synthesis", "Proofreading"],
-    exam: "High fidelity replication.",
-    error: "Does not remove primer.",
-    image: "images/uploads/pol3.png"
+    function: "DNA polymerase III is the main enzyme that synthesizes new DNA strands in the 5’→3’ direction.",
+    activities: [
+      "Leading strand synthesis",
+      "Lagging strand synthesis"
+    ],
+    exam: "Main replicative enzyme.",
+    error: "Pol III ≠ primer synthesis.",
+    image: "images/pol3.png"
   },
 
   pol1: {
     name: "DNA Polymerase I",
     process: "DNA Replication",
-    function: "Removes RNA primers and fills gaps.",
-    activities: ["5′→3′ exonuclease"],
-    exam: "Primer removal.",
-    error: "Not main elongation enzyme.",
-    image: "images/uploads/pol1.png"
+    function: "DNA polymerase I removes RNA primers and replaces them with DNA.",
+    activities: [
+      "Primer removal",
+      "DNA filling"
+    ],
+    exam: "Removes primers.",
+    error: "Not main replicative enzyme.",
+    image: "images/pol1.png"
+  },
+
+  clamp: {
+    name: "Sliding Clamp",
+    process: "DNA Replication",
+    function: "Sliding clamp holds DNA polymerase firmly on DNA, increasing processivity.",
+    activities: [
+      "Stabilizes polymerase"
+    ],
+    exam: "Prevents enzyme dissociation.",
+    error: "Not an enzyme.",
+    image: "images/clamp.png"
   },
 
   ligase: {
     name: "DNA Ligase",
     process: "DNA Replication",
-    function: "Joins Okazaki fragments.",
-    activities: ["Phosphodiester bond formation"],
-    exam: "Seals nicks.",
+    function: "DNA ligase joins Okazaki fragments by forming phosphodiester bonds.",
+    activities: [
+      "Nick sealing"
+    ],
+    exam: "Joins fragments.",
     error: "Does not synthesize DNA.",
-    image: "images/uploads/ligase.png"
+    image: "images/ligase.png"
   },
 
   gyrase: {
     name: "DNA Gyrase",
     process: "DNA Replication",
-    function: "Relieves supercoiling.",
-    activities: ["Topoisomerase II activity"],
-    exam: "Prevents DNA tangling.",
-    error: "Not involved in elongation.",
-    image: "images/uploads/gyrase.png"
-  },
-
-  "rna-pol": {
-    name: "RNA Polymerase",
-    process: "Transcription",
-    function: "Synthesizes RNA from DNA template.",
-    activities: ["5′→3′ RNA synthesis"],
-    exam: "No primer required.",
-    error: "Does not proofread.",
-    image: "images/uploads/rnap.png"
-  },
-
-  sigma: {
-    name: "Sigma Factor",
-    process: "Transcription",
-    function: "Promoter recognition.",
-    activities: ["Initiation"],
-    exam: "Specificity factor.",
-    error: "Not part of core enzyme.",
-    image: "images/uploads/sigma.png"
-  },
-
-  rho: {
-    name: "Rho Factor",
-    process: "Transcription",
-    function: "Terminates transcription.",
-    activities: ["ATP-dependent helicase"],
-    exam: "ρ-dependent termination.",
-    error: "Not required always.",
-    image: "images/uploads/rho.png"
-  },
-
-  trs: {
-    name: "Aminoacyl-tRNA Synthetase",
-    process: "Translation",
-    function: "Charges tRNA with amino acids.",
-    activities: ["ATP-dependent"],
-    exam: "Ensures specificity.",
-    error: "Does not form peptide bonds.",
-    image: "images/uploads/trna.png"
+    function: "DNA gyrase relieves supercoiling ahead of the replication fork.",
+    activities: [
+      "Relieves torsional stress"
+    ],
+    exam: "Prevents overwinding.",
+    error: "Not helicase.",
+    image: "images/gyrase.png"
   }
 };
-
