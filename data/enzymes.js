@@ -2,7 +2,7 @@ const enzymes = {
   ori: {
     name: "Origin of Replication (OriC)",
     process: "DNA Replication",
-    function: "Specific DNA sequence where replication begins.",
+    function: "Serves as the specific DNA sequence where replication begins Provides a binding site for initiator proteins (e.g., DnaA in prokaryotes) Facilitates local unwinding of DNA, forming a replication bubble Determines the direction and progression of replication forks Ensures accurate and timely duplication of the entire genome before cell division In bacteria, the origin of replication is called OriC and is essential for controlled initiation of DNA replication.",
     activities: ["AT-rich region", "Helicase binding"],
     exam: "Initiation site of replication.",
     error: "Not an enzyme.",
@@ -12,7 +12,8 @@ const enzymes = {
   helicase: {
     name: "DNA Helicase",
     process: "DNA Replication",
-    function: "Unwinds the DNA double helix using ATP.",
+    function: "DNA Helicase is an essential enzyme involved in DNA replication. Its primary function is to unwind the double-stranded DNA helix by breaking the hydrogen bonds between complementary base pairs. This unwinding creates two single DNA strands that serve as templates for DNA synthesis. Helicase moves along the DNA in an ATP-dependent manner, separating the strands ahead of the replication fork and allowing other replication enzymes, such as DNA polymerase, to function efficiently. By opening up the DNA helix, helicase plays a crucial role in ensuring accurate and continuous replication of genetic material.
+.",
     activities: ["Breaks hydrogen bonds"],
     exam: "Forms replication fork.",
     error: "Does not synthesize DNA.",
@@ -119,3 +120,4 @@ const enzymes = {
     image: "images/uploads/trna.png"
   }
 };
+
